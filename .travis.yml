@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - "8"
 install:
-  - yarn
+  - npm run
 branches:
   except:
     - gh-pages
@@ -15,14 +15,14 @@ jobs:
     - stage: lint
       script:
         # Run linter
-        - yarn lint
+        - npm run lint
     - stage: test
       script:
         # Run tests
-        - yarn test
+        - npm run test
     - stage: build
       script:
         # Build all
-        - yarn build:docs
-        - yarn build:system
-        - yarn build:app
+        - npm run build:docs
+        - npm run build:system
+        - npm run build:app
